@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Vibe Zone{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Верхняя панель -->
+    <header class="navbar">
+        {% block navbar %}
+            {% include "components/navbar.html" %}
+        {% endblock %}
+    </header>
+
+    <div class="main-container">
+        <!-- Левая панель -->
+        <aside class="sidebar">
+            {% block sidebar %}
+                {% include "components/categories.html" %}
+            {% endblock %}
+        </aside>
+
+        <!-- Основное содержимое -->
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
+
+    <!-- Нижняя панель -->
+    <footer class="footer">
+        {% block footer %}
+            {% include "components/footer.html" %}
+        {% endblock %}
+    </footer>
+</body>
+</html>
