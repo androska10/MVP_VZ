@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "homepage.apps.HomepageConfig",
     "YChat.apps.YchatConfig",
+    "userAcount.apps.UseracountConfig",
 ]
 
 MIDDLEWARE = [
